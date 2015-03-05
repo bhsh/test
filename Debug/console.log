@@ -1,0 +1,30 @@
+
+**** Build of configuration Debug for project ASC ****
+
+D:\InfineonToolsSetup\Tasking3.5.1\ctc\bin\amk -j all -a 
+Compiling ASC0.c
+Compiling cstart.c
+Compiling MAIN.c
+Compiling sync_on_halt.c
+cctc W605: ["cctc.spec" 708/0] --no-tasking-sfr has been deprecated.
+ctc I808: trial version, 9 day(s) remaining
+cctc W605: ["cctc.spec" 708/0] --no-tasking-sfr has been deprecated.
+ctc I808: trial version, 9 day(s) remaining
+ctc W544: ["..\MAIN.c" 450/3] unreachable code
+0 errors, 1 warnings
+cctc W605: ["cctc.spec" 708/0] --no-tasking-sfr has been deprecated.
+ctc I808: trial version, 9 day(s) remaining
+cctc W605: ["cctc.spec" 708/0] --no-tasking-sfr has been deprecated.
+ctc I808: trial version, 9 day(s) remaining
+Linking to ASC.elf
+ltc I460: trial version, 9 day(s) remaining
+
+Time consumed: 4256 ms
+**** End of build ****
+
+Tool info: 
+TASKING VX-toolset for TriCore: C compiler v3.5r1 Build 484.1.2
+TASKING program builder v3.5r1 Build 039
+TASKING VX-toolset for TriCore: assembler v3.5r1 Build 263
+TASKING VX-toolset for TriCore: object linker v3.5r1 Build 166
+TASKING VX-toolset for TriCore: control program v3.5r1 Build 131

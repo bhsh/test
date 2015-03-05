@@ -1,0 +1,941 @@
+	; TASKING VX-toolset for TriCore: C compiler v3.5r1 Build 484.1.2
+	; Options: -f cc17060a -c99 --dep-file=.ASC0.o.d -Ctc1782 --core=tc1.3.1 --fpu-present -F -g --make-target=ASC0.o -t4 --language=-gcc,-volatile,+strings --default-near-size=0 -O2 --default-a1-size=0 --default-a0-size=0 --source --align=0 --compact-max-size=200 --switch=auto -o ASC0.src
+	; Module start
+	.name	"ASC0"
+
+	
+$FPU
+$TC131
+	
+	.sdecl	'.text.ASC0.ASC0_vInit',code,cluster('ASC0_vInit')
+	.sect	'.text.ASC0.ASC0_vInit'
+	.align	2
+	
+	.global	ASC0_vInit
+
+; ..\ASC0.c	     1  //****************************************************************************
+; ..\ASC0.c	     2  // @Module        Asynchronous Synchronous Serial Interface 0 (ASC0)
+; ..\ASC0.c	     3  // @Filename      ASC0.c
+; ..\ASC0.c	     4  // @Project       ASC.dav
+; ..\ASC0.c	     5  //----------------------------------------------------------------------------
+; ..\ASC0.c	     6  // @Controller    Infineon TC1728
+; ..\ASC0.c	     7  //
+; ..\ASC0.c	     8  // @Compiler      Tasking 3.5r1
+; ..\ASC0.c	     9  //
+; ..\ASC0.c	    10  // @Codegenerator 1.0
+; ..\ASC0.c	    11  //
+; ..\ASC0.c	    12  // @Description   This file contains functions that use the ASC0 module.
+; ..\ASC0.c	    13  //
+; ..\ASC0.c	    14  //----------------------------------------------------------------------------
+; ..\ASC0.c	    15  // @Date          2015/1/11 12:44:17
+; ..\ASC0.c	    16  //
+; ..\ASC0.c	    17  //****************************************************************************
+; ..\ASC0.c	    18  
+; ..\ASC0.c	    19  // USER CODE BEGIN (ASC0_General,1)
+; ..\ASC0.c	    20  
+; ..\ASC0.c	    21  // USER CODE END
+; ..\ASC0.c	    22  
+; ..\ASC0.c	    23  
+; ..\ASC0.c	    24  
+; ..\ASC0.c	    25  //****************************************************************************
+; ..\ASC0.c	    26  // @Project Includes
+; ..\ASC0.c	    27  //****************************************************************************
+; ..\ASC0.c	    28  
+; ..\ASC0.c	    29  #include "MAIN.h"
+; ..\ASC0.c	    30  
+; ..\ASC0.c	    31  // USER CODE BEGIN (ASC0_General,2)
+; ..\ASC0.c	    32  
+; ..\ASC0.c	    33  // USER CODE END
+; ..\ASC0.c	    34  
+; ..\ASC0.c	    35  
+; ..\ASC0.c	    36  //****************************************************************************
+; ..\ASC0.c	    37  // @Macros
+; ..\ASC0.c	    38  //****************************************************************************
+; ..\ASC0.c	    39  
+; ..\ASC0.c	    40  // USER CODE BEGIN (ASC0_General,3)
+; ..\ASC0.c	    41  
+; ..\ASC0.c	    42  // USER CODE END
+; ..\ASC0.c	    43  
+; ..\ASC0.c	    44  
+; ..\ASC0.c	    45  //****************************************************************************
+; ..\ASC0.c	    46  // @Defines
+; ..\ASC0.c	    47  //****************************************************************************
+; ..\ASC0.c	    48  
+; ..\ASC0.c	    49  // USER CODE BEGIN (ASC0_General,4)
+; ..\ASC0.c	    50  
+; ..\ASC0.c	    51  // USER CODE END
+; ..\ASC0.c	    52  
+; ..\ASC0.c	    53  
+; ..\ASC0.c	    54  //****************************************************************************
+; ..\ASC0.c	    55  // @Typedefs
+; ..\ASC0.c	    56  //****************************************************************************
+; ..\ASC0.c	    57  
+; ..\ASC0.c	    58  // USER CODE BEGIN (ASC0_General,5)
+; ..\ASC0.c	    59  
+; ..\ASC0.c	    60  // USER CODE END
+; ..\ASC0.c	    61  
+; ..\ASC0.c	    62  
+; ..\ASC0.c	    63  //****************************************************************************
+; ..\ASC0.c	    64  // @Imported Global Variables
+; ..\ASC0.c	    65  //****************************************************************************
+; ..\ASC0.c	    66  
+; ..\ASC0.c	    67  // USER CODE BEGIN (ASC0_General,6)
+; ..\ASC0.c	    68  
+; ..\ASC0.c	    69  // USER CODE END
+; ..\ASC0.c	    70  
+; ..\ASC0.c	    71  
+; ..\ASC0.c	    72  //****************************************************************************
+; ..\ASC0.c	    73  // @Global Variables
+; ..\ASC0.c	    74  //****************************************************************************
+; ..\ASC0.c	    75  
+; ..\ASC0.c	    76  // USER CODE BEGIN (ASC0_General,7)
+; ..\ASC0.c	    77  
+; ..\ASC0.c	    78  // USER CODE END
+; ..\ASC0.c	    79  
+; ..\ASC0.c	    80  
+; ..\ASC0.c	    81  //****************************************************************************
+; ..\ASC0.c	    82  // @External Prototypes
+; ..\ASC0.c	    83  //****************************************************************************
+; ..\ASC0.c	    84  
+; ..\ASC0.c	    85  // USER CODE BEGIN (ASC0_General,8)
+; ..\ASC0.c	    86  
+; ..\ASC0.c	    87  // USER CODE END
+; ..\ASC0.c	    88  
+; ..\ASC0.c	    89  
+; ..\ASC0.c	    90  //****************************************************************************
+; ..\ASC0.c	    91  // @Prototypes Of Local Functions
+; ..\ASC0.c	    92  //****************************************************************************
+; ..\ASC0.c	    93  
+; ..\ASC0.c	    94  // USER CODE BEGIN (ASC0_General,9)
+; ..\ASC0.c	    95  
+; ..\ASC0.c	    96  // USER CODE END
+; ..\ASC0.c	    97  
+; ..\ASC0.c	    98  
+; ..\ASC0.c	    99  //****************************************************************************
+; ..\ASC0.c	   100  // @Function      void ASC0_vInit(void) 
+; ..\ASC0.c	   101  //
+; ..\ASC0.c	   102  //----------------------------------------------------------------------------
+; ..\ASC0.c	   103  // @Description   This is the initialization function of the ASC0 function 
+; ..\ASC0.c	   104  //                library. It is assumed that the SFRs used by this library 
+; ..\ASC0.c	   105  //                are in their reset state. 
+; ..\ASC0.c	   106  //
+; ..\ASC0.c	   107  //----------------------------------------------------------------------------
+; ..\ASC0.c	   108  // @Returnvalue   None
+; ..\ASC0.c	   109  //
+; ..\ASC0.c	   110  //----------------------------------------------------------------------------
+; ..\ASC0.c	   111  // @Parameters    None
+; ..\ASC0.c	   112  //
+; ..\ASC0.c	   113  //----------------------------------------------------------------------------
+; ..\ASC0.c	   114  // @Date          2015/1/11
+; ..\ASC0.c	   115  //
+; ..\ASC0.c	   116  //****************************************************************************
+; ..\ASC0.c	   117  
+; ..\ASC0.c	   118  // USER CODE BEGIN (Init,1)
+; ..\ASC0.c	   119  
+; ..\ASC0.c	   120  // USER CODE END
+; ..\ASC0.c	   121  
+; ..\ASC0.c	   122  void ASC0_vInit(void)
+; Function ASC0_vInit
+.L5:
+ASC0_vInit:	.type	func
+
+; ..\ASC0.c	   123  {
+; ..\ASC0.c	   124  
+; ..\ASC0.c	   125    volatile unsigned int uwTemp;
+; ..\ASC0.c	   126  
+; ..\ASC0.c	   127    // USER CODE BEGIN (Init,2)
+; ..\ASC0.c	   128  
+; ..\ASC0.c	   129    // USER CODE END
+; ..\ASC0.c	   130  
+; ..\ASC0.c	   131    ///  -----------------------------------------------------------------------
+; ..\ASC0.c	   132    ///  Configuration of the Module Clock:
+; ..\ASC0.c	   133    ///  -----------------------------------------------------------------------
+; ..\ASC0.c	   134    ///  - enable the ASC0 module
+; ..\ASC0.c	   135    ///  - clock divider for normal operation mode: System clock / 2 (= 20.00 
+; ..\ASC0.c	   136    ///    MHz; 50.00 ns )
+; ..\ASC0.c	   137    ///  - the ASC0 module is stopped during sleep mode
+; ..\ASC0.c	   138  
+; ..\ASC0.c	   139    MAIN_vResetENDINIT();
+	lea	a15,0xf00005f0
+	ld.w	d15,[a15]
+.L59:
+	insert	d4,d15,#0,#0,#1
+	sub.a	a10,#8
+.L44:
+	call	MAIN_vWriteWDTCON0
+	lea	a2,0xf00005f0
+.L2:
+	ld.bu	d15,[a2]
+	jnz.t	d15:0,.L2				; predicted taken
+.L60:
+
+; ..\ASC0.c	   140    ASC0_CLC       =  0x00000200;  // load clock control register
+	mov.u	d15,#512
+	st.w	0xf0000a00,d15
+.L61:
+
+; ..\ASC0.c	   141    uwTemp         =  ASC0_CLC;    // dummy read to avoid pipeline effects
+	ld.w	d15,0xf0000a00
+	st.w	[a10],d15
+.L62:
+
+; ..\ASC0.c	   142    MAIN_vSetENDINIT();
+	ld.w	d15,[a15]
+	or	d4,d15,#1
+.L63:
+	call	MAIN_vWriteWDTCON0
+.L64:
+
+; ..\ASC0.c	   143  
+; ..\ASC0.c	   144    ///  -----------------------------------------------------------------------
+; ..\ASC0.c	   145    ///  Configuration of the ASC0 Baudrate Generator:
+; ..\ASC0.c	   146    ///  -----------------------------------------------------------------------
+; ..\ASC0.c	   147    ///  - fractional divider as prescaler for baud rate timer is used
+; ..\ASC0.c	   148  
+; ..\ASC0.c	   149    ASC0_FDV       =  0x01D0;      // load ASC0 fractional divider register
+	mov.u	d15,#464
+	st.w	0xf0000a18,d15
+.L65:
+
+; ..\ASC0.c	   150  
+; ..\ASC0.c	   151    ///  - required baud rate = 19200 baud
+; ..\ASC0.c	   152    ///  - real baud rate     = 19200 baud
+; ..\ASC0.c	   153    ///  - deviation          = 0 %
+; ..\ASC0.c	   154  
+; ..\ASC0.c	   155    ASC0_BG        =  0x0000003A;  // load ASC0 baud rate time reload register
+	mov	d15,#58
+	st.w	0xf0000a14,d15
+.L66:
+
+; ..\ASC0.c	   156  
+; ..\ASC0.c	   157    ///  -----------------------------------------------------------------------
+; ..\ASC0.c	   158    ///  Configuration of the ASC0 Operation Mode:
+; ..\ASC0.c	   159    ///  -----------------------------------------------------------------------
+; ..\ASC0.c	   160    ///  - 8-bit data asychronous operation with one stop bit
+; ..\ASC0.c	   161    ///  - receiver is enabled
+; ..\ASC0.c	   162    ///  - fractional divider is enabled
+; ..\ASC0.c	   163  
+; ..\ASC0.c	   164    ASC0_CON       =  0x00000811;  // load ASC0 control register
+	mov.u	d15,#2065
+	st.w	0xf0000a10,d15
+.L67:
+
+; ..\ASC0.c	   165  
+; ..\ASC0.c	   166    ///  -----------------------------------------------------------------------
+; ..\ASC0.c	   167    ///  Configuration of the used ASC0 Port Pins:
+; ..\ASC0.c	   168    ///  -----------------------------------------------------------------------
+; ..\ASC0.c	   169    ASC0_PISEL     =  0x0000;      // load peripheral input selection register
+	mov	d15,#0
+	st.w	0xf0000a04,d15
+.L68:
+
+; ..\ASC0.c	   170  
+; ..\ASC0.c	   171    ///  - P3.0 is used as   ASC0 receive input signal 1 ( ASC0_RX)
+; ..\ASC0.c	   172    ///  - the pull-up device is assigned
+; ..\ASC0.c	   173    ///  - output driver characteristic: Strong driver soft edge
+; ..\ASC0.c	   174  
+; ..\ASC0.c	   175    P3_IOCR0       = (P3_IOCR0 & ~0x000000F0) | 0x00000020; // load control 
+	lea	a15,0xf0000f10
+	ld.w	d15,[a15]
+	insert	d15,d15,#2,#4,#4
+	st.w	[a15],d15
+.L69:
+
+; ..\ASC0.c	   176                                                            // register
+; ..\ASC0.c	   177  
+; ..\ASC0.c	   178    ///  - P3.1 is used as  ASC0 output signal 1 ( ASC0_TX)
+; ..\ASC0.c	   179    ///  - the push/pull function is activated
+; ..\ASC0.c	   180    ///  - output driver characteristic: Strong driver soft edge
+; ..\ASC0.c	   181    ///  - the emergency stop function is disabled
+; ..\ASC0.c	   182  
+; ..\ASC0.c	   183    P3_IOCR0       = (P3_IOCR0 & ~0x0000F000) | 0x00009000; // load control 
+	ld.w	d15,[a15]
+	insert	d15,d15,#9,#12,#4
+	st.w	[a15],d15
+.L70:
+
+; ..\ASC0.c	   184                                                            // register
+; ..\ASC0.c	   185  
+; ..\ASC0.c	   186  
+; ..\ASC0.c	   187    ///  -----------------------------------------------------------------------
+; ..\ASC0.c	   188    ///  Configuration of the used ASC0 Interrupts:
+; ..\ASC0.c	   189    ///  -----------------------------------------------------------------------
+; ..\ASC0.c	   190    ///  - Rx service request node configuration:
+; ..\ASC0.c	   191    ///  - Rx interrupt priority level (SRPN) = 1
+; ..\ASC0.c	   192    ///  - Rx CPU interrupt is selected
+; ..\ASC0.c	   193  
+; ..\ASC0.c	   194    ASC0_RSRC      =  0x00001001;  // set service request control register
+	mov.u	d15,#4097
+	st.w	0xf0000af4,d15
+.L71:
+
+; ..\ASC0.c	   195  
+; ..\ASC0.c	   196  
+; ..\ASC0.c	   197    // USER CODE BEGIN (ASC0_Function,3)
+; ..\ASC0.c	   198  
+; ..\ASC0.c	   199    // USER CODE END
+; ..\ASC0.c	   200  
+; ..\ASC0.c	   201    ASC0_CON_R     =  1;           // enable baud rate generator
+	ld.bu	d15,0xf0000a11
+	st.t	0xf0000a11:7,#1
+.L72:
+
+; ..\ASC0.c	   202  
+; ..\ASC0.c	   203  
+; ..\ASC0.c	   204  } //  End of function ASC0_vInit
+	ret
+.L36:
+	
+__ASC0_vInit_function_end:
+	.size	ASC0_vInit,__ASC0_vInit_function_end-ASC0_vInit
+.L20:
+	; End of function
+	
+	.sdecl	'.text.ASC0.ASC0_vSendData',code,cluster('ASC0_vSendData')
+	.sect	'.text.ASC0.ASC0_vSendData'
+	.align	2
+	
+	.global	ASC0_vSendData
+
+; ..\ASC0.c	   205  
+; ..\ASC0.c	   206  
+; ..\ASC0.c	   207  //****************************************************************************
+; ..\ASC0.c	   208  // @Function      void ASC0_vSendData(ushort usData) 
+; ..\ASC0.c	   209  //
+; ..\ASC0.c	   210  //----------------------------------------------------------------------------
+; ..\ASC0.c	   211  // @Description   This function writes a send data initialization word into 
+; ..\ASC0.c	   212  //                the transmit buffer register.
+; ..\ASC0.c	   213  //                
+; ..\ASC0.c	   214  //                Note: 
+; ..\ASC0.c	   215  //                In a multiprocessor system the master with this function 
+; ..\ASC0.c	   216  //                has the possibility to send data to the selected slave. To 
+; ..\ASC0.c	   217  //                achieve this, the 9th bit must set on zero.
+; ..\ASC0.c	   218  //
+; ..\ASC0.c	   219  //----------------------------------------------------------------------------
+; ..\ASC0.c	   220  // @Returnvalue   None
+; ..\ASC0.c	   221  //
+; ..\ASC0.c	   222  //----------------------------------------------------------------------------
+; ..\ASC0.c	   223  // @Parameters    usData: 
+; ..\ASC0.c	   224  //                Data to be send
+; ..\ASC0.c	   225  //
+; ..\ASC0.c	   226  //----------------------------------------------------------------------------
+; ..\ASC0.c	   227  // @Date          2015/1/11
+; ..\ASC0.c	   228  //
+; ..\ASC0.c	   229  //****************************************************************************
+; ..\ASC0.c	   230  
+; ..\ASC0.c	   231  // USER CODE BEGIN (SendData,1)
+; ..\ASC0.c	   232  
+; ..\ASC0.c	   233  // USER CODE END
+; ..\ASC0.c	   234  
+; ..\ASC0.c	   235  void ASC0_vSendData(ushort usData)
+; Function ASC0_vSendData
+.L7:
+ASC0_vSendData:	.type	func
+
+; ..\ASC0.c	   236  {
+; ..\ASC0.c	   237   // ASC0_TBSRC_CLRR  =  1;         // reset transmit buffer interrupt request
+; ..\ASC0.c	   238    ASC0_TBUF      =  usData;      // load transmit buffer register
+	st.w	0xf0000a20,d4
+.L77:
+
+; ..\ASC0.c	   239  
+; ..\ASC0.c	   240  } //  End of function ASC0_vSendData
+	ret
+.L39:
+	
+__ASC0_vSendData_function_end:
+	.size	ASC0_vSendData,__ASC0_vSendData_function_end-ASC0_vSendData
+.L25:
+	; End of function
+	
+	.sdecl	'.text.ASC0.ASC0_usGetData',code,cluster('ASC0_usGetData')
+	.sect	'.text.ASC0.ASC0_usGetData'
+	.align	2
+	
+	.global	ASC0_usGetData
+
+; ..\ASC0.c	   241  
+; ..\ASC0.c	   242  
+; ..\ASC0.c	   243  //****************************************************************************
+; ..\ASC0.c	   244  // @Function      ushort ASC0_usGetData(void) 
+; ..\ASC0.c	   245  //
+; ..\ASC0.c	   246  //----------------------------------------------------------------------------
+; ..\ASC0.c	   247  // @Description   This function reads out the content of the receive buffer 
+; ..\ASC0.c	   248  //                register which contains the received data.
+; ..\ASC0.c	   249  //
+; ..\ASC0.c	   250  //----------------------------------------------------------------------------
+; ..\ASC0.c	   251  // @Returnvalue   data that has been received
+; ..\ASC0.c	   252  //
+; ..\ASC0.c	   253  //----------------------------------------------------------------------------
+; ..\ASC0.c	   254  // @Parameters    None
+; ..\ASC0.c	   255  //
+; ..\ASC0.c	   256  //----------------------------------------------------------------------------
+; ..\ASC0.c	   257  // @Date          2015/1/11
+; ..\ASC0.c	   258  //
+; ..\ASC0.c	   259  //****************************************************************************
+; ..\ASC0.c	   260  
+; ..\ASC0.c	   261  // USER CODE BEGIN (GetData,1)
+; ..\ASC0.c	   262  
+; ..\ASC0.c	   263  // USER CODE END
+; ..\ASC0.c	   264  
+; ..\ASC0.c	   265  ushort ASC0_usGetData(void)
+; Function ASC0_usGetData
+.L9:
+ASC0_usGetData:	.type	func
+
+; ..\ASC0.c	   266  {
+; ..\ASC0.c	   267    return(ASC0_RBUF & 0x1FF);     // return receive buffer register
+	ld.w	d15,0xf0000a24
+	extr.u	d15,d15,#0,#16
+	and	d2,d15,#511
+.L82:
+
+; ..\ASC0.c	   268  
+; ..\ASC0.c	   269  } //  End of function ASC0_usGetData
+	ret
+.L42:
+	
+__ASC0_usGetData_function_end:
+	.size	ASC0_usGetData,__ASC0_usGetData_function_end-ASC0_usGetData
+.L30:
+	; End of function
+	
+	.sdecl	'.text.intvec.001',code
+	.sect	'.text.intvec.001'
+
+; ..\ASC0.c	   270  
+; ..\ASC0.c	   271  
+; ..\ASC0.c	   272  //****************************************************************************
+; ..\ASC0.c	   273  // @Function      void ASC0_viRx(void) 
+; ..\ASC0.c	   274  //
+; ..\ASC0.c	   275  //----------------------------------------------------------------------------
+; ..\ASC0.c	   276  // @Description   This is the receive interrupt service routine for the ASC0. 
+; ..\ASC0.c	   277  //                It is called if the data has been received. 
+; ..\ASC0.c	   278  //                Please note that you have to add application specific code 
+; ..\ASC0.c	   279  //                to this function.
+; ..\ASC0.c	   280  //
+; ..\ASC0.c	   281  //----------------------------------------------------------------------------
+; ..\ASC0.c	   282  // @Returnvalue   None
+; ..\ASC0.c	   283  //
+; ..\ASC0.c	   284  //----------------------------------------------------------------------------
+; ..\ASC0.c	   285  // @Parameters    None
+; ..\ASC0.c	   286  //
+; ..\ASC0.c	   287  //----------------------------------------------------------------------------
+; ..\ASC0.c	   288  // @Date          2015/1/11
+; ..\ASC0.c	   289  //
+; ..\ASC0.c	   290  //****************************************************************************
+; ..\ASC0.c	   291  
+; ..\ASC0.c	   292  // USER CODE BEGIN (Rx,1)
+; ..\ASC0.c	   293  
+; ..\ASC0.c	   294  // USER CODE END
+; ..\ASC0.c	   295  
+; ..\ASC0.c	   296  void INTERRUPT (ASC0_RINT) ASC0_viRx(void)
+	movh.a	a14,#@his(ASC0_viRx)
+	lea	a14,[a14]@los(ASC0_viRx)
+	ji	a14
+	.sdecl	'.text.ASC0.ASC0_viRx',code,cluster('ASC0_viRx')
+	.sect	'.text.ASC0.ASC0_viRx'
+	.align	2
+	
+	.global	ASC0_viRx
+; Function ASC0_viRx
+.L11:
+ASC0_viRx:	.type	func
+
+; ..\ASC0.c	   297  {
+; ..\ASC0.c	   298  
+; ..\ASC0.c	   299    // USER CODE BEGIN (Rx,2)
+; ..\ASC0.c	   300   //  ASC0_vSendData(ASC0_usGetData()+1);
+; ..\ASC0.c	   301    // USER CODE END
+; ..\ASC0.c	   302  
+; ..\ASC0.c	   303  } //  End of function ASC0_viRx
+	rfe
+.L43:
+	
+__ASC0_viRx_function_end:
+	.size	ASC0_viRx,__ASC0_viRx_function_end-ASC0_viRx
+.L35:
+	; End of function
+	
+	.calls	'ASC0_vInit','MAIN_vWriteWDTCON0'
+	.calls	'ASC0_vInit','',8
+	.calls	'ASC0_vSendData','',0
+	.calls	'ASC0_usGetData','',0
+	.extern	MAIN_vWriteWDTCON0
+	.calls	'ASC0_viRx','',0
+	.sdecl	'.debug_info',debug
+	.sect	'.debug_info'
+.L13:
+	.word	854
+	.half	3
+	.word	.L14
+	.byte	4
+.L12:
+	.byte	1
+	.byte	'..\\ASC0.c',0
+	.byte	'TASKING VX-toolset for TriCore: C compiler',0
+	.byte	'D:\\InfineonToolsSetup\\TaskingProject\\ASC\\Debug\\',0,12,1
+	.word	.L15
+	.byte	2
+	.byte	'MAIN_vWriteWDTCON0',0,1,139,1,6,1,1,1,1,3
+	.byte	'uwValue',0,1,139,1,31
+	.word	.L45-.L13
+	.byte	0
+.L45:
+	.byte	4
+	.byte	'unsigned int',0,4,7
+.L37:
+	.byte	5
+	.word	165
+.L40:
+	.byte	4
+	.byte	'unsigned short int',0,2,7,6
+	.byte	'__size_t',0,2,1,1
+	.word	165
+	.byte	6
+	.byte	'__codeptr',0,2,1,1
+	.word	.L46-.L13
+.L46:
+	.byte	7
+	.word	.L47-.L13
+.L47:
+	.byte	8,1,6
+	.byte	'ushort',0,1,71,24
+	.word	186
+	.byte	6
+	.byte	'uword',0,1,73,24
+	.word	165
+	.byte	6
+	.byte	'T_Reg32',0,1,110,4
+	.word	.L48-.L13
+.L48:
+	.byte	5
+	.word	.L49-.L13
+.L49:
+	.byte	9,1,76,18,4,10
+	.byte	'bit0',0,1
+	.word	.L50-.L13
+	.byte	1,7,2,35,0,10
+	.byte	'bit1',0,1
+	.word	.L50-.L13
+	.byte	1,6,2,35,0,10
+	.byte	'bit2',0,1
+	.word	.L50-.L13
+	.byte	1,5,2,35,0,10
+	.byte	'bit3',0,1
+	.word	.L50-.L13
+	.byte	1,4,2,35,0,10
+	.byte	'bit4',0,1
+	.word	.L50-.L13
+	.byte	1,3,2,35,0,10
+	.byte	'bit5',0,1
+	.word	.L50-.L13
+	.byte	1,2,2,35,0,10
+	.byte	'bit6',0,1
+	.word	.L50-.L13
+	.byte	1,1,2,35,0,10
+	.byte	'bit7',0,1
+	.word	.L50-.L13
+	.byte	1,0,2,35,0,10
+	.byte	'bit8',0,1
+	.word	.L50-.L13
+	.byte	1,7,2,35,1,10
+	.byte	'bit9',0,1
+	.word	.L50-.L13
+	.byte	1,6,2,35,1,10
+	.byte	'bit10',0,1
+	.word	.L50-.L13
+	.byte	1,5,2,35,1,10
+	.byte	'bit11',0,1
+	.word	.L50-.L13
+	.byte	1,4,2,35,1,10
+	.byte	'bit12',0,1
+	.word	.L50-.L13
+	.byte	1,3,2,35,1,10
+	.byte	'bit13',0,1
+	.word	.L50-.L13
+	.byte	1,2,2,35,1,10
+	.byte	'bit14',0,1
+	.word	.L50-.L13
+	.byte	1,1,2,35,1,10
+	.byte	'bit15',0,1
+	.word	.L50-.L13
+	.byte	1,0,2,35,1,10
+	.byte	'bit16',0,1
+	.word	.L50-.L13
+	.byte	1,7,2,35,2,10
+	.byte	'bit17',0,1
+	.word	.L50-.L13
+	.byte	1,6,2,35,2,10
+	.byte	'bit18',0,1
+	.word	.L50-.L13
+	.byte	1,5,2,35,2,10
+	.byte	'bit19',0,1
+	.word	.L50-.L13
+	.byte	1,4,2,35,2,10
+	.byte	'bit20',0,1
+	.word	.L50-.L13
+	.byte	1,3,2,35,2,10
+	.byte	'bit21',0,1
+	.word	.L50-.L13
+	.byte	1,2,2,35,2,10
+	.byte	'bit22',0,1
+	.word	.L50-.L13
+	.byte	1,1,2,35,2,10
+	.byte	'bit23',0,1
+	.word	.L50-.L13
+	.byte	1,0,2,35,2,10
+	.byte	'bit24',0,1
+	.word	.L50-.L13
+	.byte	1,7,2,35,3,10
+	.byte	'bit25',0,1
+	.word	.L50-.L13
+	.byte	1,6,2,35,3,10
+	.byte	'bit26',0,1
+	.word	.L50-.L13
+	.byte	1,5,2,35,3,10
+	.byte	'bit27',0,1
+	.word	.L50-.L13
+	.byte	1,4,2,35,3,10
+	.byte	'bit28',0,1
+	.word	.L50-.L13
+	.byte	1,3,2,35,3,10
+	.byte	'bit29',0,1
+	.word	.L50-.L13
+	.byte	1,2,2,35,3,10
+	.byte	'bit30',0,1
+	.word	.L50-.L13
+	.byte	1,1,2,35,3,10
+	.byte	'bit31',0,1
+	.word	.L50-.L13
+	.byte	1,0,2,35,3,0
+.L50:
+	.byte	4
+	.byte	'unsigned char',0,1,8,0
+	.sdecl	'.debug_abbrev',debug
+	.sect	'.debug_abbrev'
+.L14:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,16,6,0,0,2,46,1,3,8,58,15,59,15,57,15,54,15,39,12,63,12,60,12,0,0
+	.byte	3,5,0,3,8,58,15,59,15,57,15,73,19,0,0,4,36,0,3,8,11,15,62,15,0,0,5,53,0,73,19,0,0,6,22,0,3,8,58,15,59
+	.byte	15,57,15,73,19,0,0,7,15,0,73,19,0,0,8,21,0,54,15,0,0,9,19,1,58,15,59,15,57,15,11,15,0,0,10,13,0,3,8,11
+	.byte	15,73,19,13,15,12,15,56,9,0,0,0
+	.sdecl	'.debug_line',debug
+	.sect	'.debug_line'
+.L15:
+	.word	.L52-.L51
+.L51:
+	.half	3
+	.word	.L54-.L53
+.L53:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'..\\MAIN.h',0,0,0,0
+	.byte	'..\\ASC0.c',0,0,0,0,0
+.L54:
+.L52:
+	.sdecl	'.debug_info',debug,cluster('ASC0_vInit')
+	.sect	'.debug_info'
+.L16:
+	.word	185
+	.half	3
+	.word	.L17
+	.byte	4,1
+	.byte	'..\\ASC0.c',0
+	.byte	'TASKING VX-toolset for TriCore: C compiler',0
+	.byte	'D:\\InfineonToolsSetup\\TaskingProject\\ASC\\Debug\\',0,12,1
+	.word	.L19,.L18
+	.byte	2
+	.word	.L12
+	.byte	3
+	.byte	'ASC0_vInit',0,1,122,6,1,1,1
+	.word	.L5,.L36,.L4
+	.byte	4
+	.word	.L5,.L36
+	.byte	5
+	.byte	'uwTemp',0,1,125,25
+	.word	.L37,.L38
+	.byte	0,0,0
+	.sdecl	'.debug_abbrev',debug,cluster('ASC0_vInit')
+	.sect	'.debug_abbrev'
+.L17:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
+	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,11,1,17,1,18,1,0,0,5,52,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,0
+	.sdecl	'.debug_line',debug,cluster('ASC0_vInit')
+	.sect	'.debug_line'
+.L18:
+	.word	.L56-.L55
+.L55:
+	.half	3
+	.word	.L58-.L57
+.L57:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'..\\ASC0.c',0,0,0,0,0
+.L58:
+	.byte	5,3,7,0,5,2
+	.word	.L5
+	.byte	3,138,1,1,5,6,9
+	.half	.L59-.L5
+	.byte	3,111,1,5,3,9
+	.half	.L44-.L59
+	.byte	3,17,1,5,31,9
+	.half	.L60-.L44
+	.byte	3,1,1,5,29,9
+	.half	.L61-.L60
+	.byte	3,1,1,5,3,9
+	.half	.L62-.L61
+	.byte	3,1,1,5,21,9
+	.half	.L63-.L62
+	.byte	1,5,27,9
+	.half	.L64-.L63
+	.byte	3,7,1,5,31,9
+	.half	.L65-.L64
+	.byte	3,6,1,9
+	.half	.L66-.L65
+	.byte	3,9,1,5,27,9
+	.half	.L67-.L66
+	.byte	3,5,1,5,57,9
+	.half	.L68-.L67
+	.byte	3,6,1,9
+	.half	.L69-.L68
+	.byte	3,8,1,5,31,9
+	.half	.L70-.L69
+	.byte	3,11,1,5,22,9
+	.half	.L71-.L70
+	.byte	3,7,1,5,1,9
+	.half	.L72-.L71
+	.byte	3,3,1,7,9
+	.half	.L20-.L72
+	.byte	0,1,1
+.L56:
+	.sdecl	'.debug_ranges',debug,cluster('ASC0_vInit')
+	.sect	'.debug_ranges'
+.L19:
+	.word	-1,.L5,0,.L20-.L5,0,0
+	.sdecl	'.debug_info',debug,cluster('ASC0_vSendData')
+	.sect	'.debug_info'
+.L21:
+	.word	190
+	.half	3
+	.word	.L22
+	.byte	4,1
+	.byte	'..\\ASC0.c',0
+	.byte	'TASKING VX-toolset for TriCore: C compiler',0
+	.byte	'D:\\InfineonToolsSetup\\TaskingProject\\ASC\\Debug\\',0,12,1
+	.word	.L24,.L23
+	.byte	2
+	.word	.L12
+	.byte	3
+	.byte	'ASC0_vSendData',0,1,235,1,6,1,1,1
+	.word	.L7,.L39,.L6
+	.byte	4
+	.byte	'usData',0,1,235,1,28
+	.word	.L40,.L41
+	.byte	5
+	.word	.L7,.L39
+	.byte	0,0
+	.sdecl	'.debug_abbrev',debug,cluster('ASC0_vSendData')
+	.sect	'.debug_abbrev'
+.L22:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
+	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('ASC0_vSendData')
+	.sect	'.debug_line'
+.L23:
+	.word	.L74-.L73
+.L73:
+	.half	3
+	.word	.L76-.L75
+.L75:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'..\\ASC0.c',0,0,0,0,0
+.L76:
+	.byte	5,27,7,0,5,2
+	.word	.L7
+	.byte	3,237,1,1,5,1,9
+	.half	.L77-.L7
+	.byte	3,2,1,7,9
+	.half	.L25-.L77
+	.byte	0,1,1
+.L74:
+	.sdecl	'.debug_ranges',debug,cluster('ASC0_vSendData')
+	.sect	'.debug_ranges'
+.L24:
+	.word	-1,.L7,0,.L25-.L7,0,0
+	.sdecl	'.debug_info',debug,cluster('ASC0_usGetData')
+	.sect	'.debug_info'
+.L26:
+	.word	174
+	.half	3
+	.word	.L27
+	.byte	4,1
+	.byte	'..\\ASC0.c',0
+	.byte	'TASKING VX-toolset for TriCore: C compiler',0
+	.byte	'D:\\InfineonToolsSetup\\TaskingProject\\ASC\\Debug\\',0,12,1
+	.word	.L29,.L28
+	.byte	2
+	.word	.L12
+	.byte	3
+	.byte	'ASC0_usGetData',0,1,137,2,8
+	.word	.L40
+	.byte	1,1,1
+	.word	.L9,.L42,.L8
+	.byte	4
+	.word	.L9,.L42
+	.byte	0,0
+	.sdecl	'.debug_abbrev',debug,cluster('ASC0_usGetData')
+	.sect	'.debug_abbrev'
+.L27:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
+	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('ASC0_usGetData')
+	.sect	'.debug_line'
+.L28:
+	.word	.L79-.L78
+.L78:
+	.half	3
+	.word	.L81-.L80
+.L80:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'..\\ASC0.c',0,0,0,0,0
+.L81:
+	.byte	5,3,7,0,5,2
+	.word	.L9
+	.byte	3,138,2,1,5,1,9
+	.half	.L82-.L9
+	.byte	3,2,1,7,9
+	.half	.L30-.L82
+	.byte	0,1,1
+.L79:
+	.sdecl	'.debug_ranges',debug,cluster('ASC0_usGetData')
+	.sect	'.debug_ranges'
+.L29:
+	.word	-1,.L9,0,.L30-.L9,0,0
+	.sdecl	'.debug_info',debug,cluster('ASC0_viRx')
+	.sect	'.debug_info'
+.L31:
+	.word	165
+	.half	3
+	.word	.L32
+	.byte	4,1
+	.byte	'..\\ASC0.c',0
+	.byte	'TASKING VX-toolset for TriCore: C compiler',0
+	.byte	'D:\\InfineonToolsSetup\\TaskingProject\\ASC\\Debug\\',0,12,1
+	.word	.L34,.L33
+	.byte	2
+	.word	.L12
+	.byte	3
+	.byte	'ASC0_viRx',0,1,168,2,28,1,1,1
+	.word	.L11,.L43,.L10
+	.byte	4
+	.word	.L11,.L43
+	.byte	0,0
+	.sdecl	'.debug_abbrev',debug,cluster('ASC0_viRx')
+	.sect	'.debug_abbrev'
+.L32:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
+	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('ASC0_viRx')
+	.sect	'.debug_line'
+.L33:
+	.word	.L84-.L83
+.L83:
+	.half	3
+	.word	.L86-.L85
+.L85:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'..\\ASC0.c',0,0,0,0,0
+.L86:
+	.byte	5,1,7,0,5,2
+	.word	.L11
+	.byte	3,174,2,1,7,9
+	.half	.L35-.L11
+	.byte	0,1,1
+.L84:
+	.sdecl	'.debug_ranges',debug,cluster('ASC0_viRx')
+	.sect	'.debug_ranges'
+.L34:
+	.word	-1,.L11,0,.L35-.L11,0,0
+	.sdecl	'.debug_loc',debug,cluster('ASC0_usGetData')
+	.sect	'.debug_loc'
+.L8:
+	.word	-1,.L9,.L9-.L9,.L42-.L9
+	.half	2
+	.byte	138,0
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('ASC0_vInit')
+	.sect	'.debug_loc'
+.L4:
+	.word	-1,.L5,.L5-.L5,.L44-.L5
+	.half	2
+	.byte	138,0
+	.word	.L44-.L5,.L36-.L5
+	.half	2
+	.byte	138,8
+	.word	.L36-.L5,.L36-.L5
+	.half	2
+	.byte	138,0
+	.word	0,0
+.L38:
+	.word	-1,.L5,.L5-.L5,.L36-.L5
+	.half	2
+	.byte	145,120
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('ASC0_vSendData')
+	.sect	'.debug_loc'
+.L6:
+	.word	-1,.L7,.L7-.L7,.L39-.L7
+	.half	2
+	.byte	138,0
+	.word	0,0
+.L41:
+	.word	-1,.L7,.L7-.L7,.L39-.L7
+	.half	5
+	.byte	144,34,157,32,0
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('ASC0_viRx')
+	.sect	'.debug_loc'
+.L10:
+	.word	-1,.L11,.L11-.L11,.L43-.L11
+	.half	2
+	.byte	138,0
+	.word	0,0
+	.sdecl	'.debug_frame',debug
+	.sect	'.debug_frame'
+.L87:
+	.word	48
+	.word	-1
+	.byte	3,0,2,1,27,12,26,0,8,26,8,27,8,28,8,29,8,30,8,31,8,16,8,17,8,24,8,25,8,32,8,33,8,34,8,35,8,36,8,37,8,38
+	.byte	8,39
+	.sdecl	'.debug_frame',debug,cluster('ASC0_vInit')
+	.sect	'.debug_frame'
+	.word	36
+	.word	.L87,.L5,.L36-.L5
+	.byte	4
+	.word	(.L44-.L5)/2
+	.byte	19,8,22,26,3,19,138,8,4
+	.word	(.L36-.L44)/2
+	.byte	19,0,8,26,0,0
+	.sdecl	'.debug_frame',debug,cluster('ASC0_vSendData')
+	.sect	'.debug_frame'
+	.word	24
+	.word	.L87,.L7,.L39-.L7
+	.byte	8,18,8,19,8,20,8,21,8,22,8,23
+	.sdecl	'.debug_frame',debug,cluster('ASC0_usGetData')
+	.sect	'.debug_frame'
+	.word	24
+	.word	.L87,.L9,.L42-.L9
+	.byte	8,18,8,19,8,20,8,21,8,22,8,23
+	.sdecl	'.debug_frame',debug,cluster('ASC0_viRx')
+	.sect	'.debug_frame'
+	.word	12
+	.word	.L87,.L11,.L43-.L11
+
+; ..\ASC0.c	   304  
+; ..\ASC0.c	   305  
+; ..\ASC0.c	   306  
+; ..\ASC0.c	   307  
+; ..\ASC0.c	   308  // USER CODE BEGIN (ASC0_General,10)
+; ..\ASC0.c	   309  
+; ..\ASC0.c	   310  // USER CODE END
+; ..\ASC0.c	   311  
+
+	; Module end
